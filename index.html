@@ -7,7 +7,10 @@
 [data-theme=light]{--bg:#eef2fa;--card:rgba(255,255,255,.85);--bd:rgba(25,40,80,.13);--tx:#141b2f;--mut:#5b6784;--ok:#0e9f6e;--warn:#d27a00;--soft:rgba(25,40,80,.09);--hdr:rgba(238,242,250,.85);--dlg:#fff;color-scheme:light}
 [data-theme=light] .card{box-shadow:0 6px 24px -10px rgba(30,50,100,.18)}[data-theme=light] .orb{opacity:.16}
 *{box-sizing:border-box;margin:0}
-body{background:var(--bg);color:var(--tx);font:14px/1.4 "Segoe UI",system-ui,sans-serif;min-height:100vh;overflow-x:hidden}
+body{background:var(--bg);color:var(--tx);font:14px/1.4 "Segoe UI",system-ui,sans-serif;min-height:100vh;overflow-x:hidden;display:flex;flex-direction:column}
+#app{flex:1}
+.credit{width:100%;text-align:center;padding:18px 12px 22px;color:var(--mut);font-size:12px;letter-spacing:.35px;border-top:1px solid var(--bd);margin-top:28px}
+.credit strong{color:var(--a);font-weight:700}
 .orb{position:fixed;border-radius:50%;filter:blur(110px);opacity:.35;z-index:-1;animation:float 18s ease-in-out infinite alternate;transition:background 1s}
 .o1{width:480px;height:480px;background:var(--a);top:-120px;left:-100px}.o2{width:420px;height:420px;background:#a45bff;bottom:-120px;right:-80px;animation-delay:-8s}
 @keyframes float{to{transform:translate(70px,50px) scale(1.15)}}
@@ -81,6 +84,7 @@ body.tv header .btn.hide{display:none}
 </header>
 <div class="bar" id="bar"></div>
 <main id="app"></main>
+<footer class="credit">Prepared By <strong>Amr Mohamed</strong> — Data Analyst &amp; AI Creative</footer>
 
 <dialog id="dlg"><h2 style="color:var(--tx);font-size:18px">Connect your data</h2>
  <ol><li>Upload <b>Database.xlsx</b> to Google Drive → open with Google Sheets (keep the same tab names).</li>
